@@ -1,0 +1,25 @@
+[project]
+name = "mini-agent"
+version = "0.1.0"
+description = "A small, clean, tool-using AI agent in Python — provider-agnostic, tested, offline-runnable."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ayman Ghmari" }]
+keywords = ["ai", "agent", "llm", "openai", "anthropic", "automation"]
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+anthropic = ["anthropic>=0.39"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+miniagent = "miniagent.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["miniagent"]
